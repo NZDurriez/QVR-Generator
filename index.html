@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QVR Creator</title>
+    <link rel="stylesheet" href="qvr_style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">QVR Creator</h2>
+        <div class="form-group">
+            <label>Vehicle Plate:</label>
+            <input type="text" id="plate" maxlength="6" pattern="[A-Za-z0-9]{1,6}" title="Only alphanumeric characters, max 6" placeholder="ABC123">
+        </div>
+        <div class="form-group">
+            <label>Registered Owner:</label>
+            <input type="text" id="owner" placeholder="Eg. John Doe">
+        </div>
+        <div class="form-group">
+            <label>Warrant of Fitness:</label>
+            <select id="woF">
+                <option value="Valid">Valid</option>
+                <option value="Invalid">Invalid</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Rego:</label>
+            <select id="rego">
+                <option value="Valid">Valid</option>
+                <option value="Invalid">Invalid</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Vehicle Make:</label>
+            <input type="text" id="make" placeholder="Eg. Nissan">
+        </div>
+        <div class="form-group">
+            <label>Vehicle Model:</label>
+            <input type="text" id="model" placeholder="Eg. Skyline">
+        </div>
+        <div class="form-group">
+            <label>Year:</label>
+            <input type="text" id="year" maxlength="4" pattern="\d{4}" title="Enter a 4-digit year" placeholder="2018">
+        </div>
+        <div class="form-group">
+            <label>Colour:</label>
+            <input type="text" id="color" placeholder="Eg. Red">
+        </div>
+        <div class="form-group">
+            <label>Flags:</label>
+            <input type="text" id="flags" placeholder="Eg. Registered owner has active WTA">
+        </div>
+        <button id="generateButton">Generate</button>
+        <p id="output" class="output"></p>
+    </div>
+    <script src="qvr_script.js"></script>
+</body>
+</html>
